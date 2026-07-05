@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/glb.css">
+    <!-- katex -->
+    <link rel="stylesheet" href="../css/katex.min.css">
+    <script defer src="../js/katex.min.js"></script>
+    <!-- math.js -->
+    <script defer src="../js/math.js"></script>
+    <!-- script -->
+    <script defer src="../js/glb.js"></script>
+    <title>GLB</title>
+</head>
+<body>
+    <h1>Gerak Lurus Beraturan</h1>
+    <div class="definisi">
+        <h2>GLB</h2>
+        <p>GLB atau Gerak Lurus Beraturan adalah gerak suatu benda pada lintasan garis lurus dengan kecepatan konstan (tetap). Karena kecepatannya tetap, benda tidak mengalami percepatan (percepatan a = 0).</p>
+    </div>
+
+    <div class="rumus">
+        <h2>Rumus Utama</h2>
+        <div id="divGlb"></div>
+        <h4>v = kecepatan akhir(m/s)</h4>
+        <h4>s = jarak(m)</h4>
+        <h4>t = waktu(s)</h4>
+    </div>
+
+    <div class="tools">
+        <h2>Alat Bantu</h2>
+        <ul>
+            <li><a href="#" class="btn-tools btn-tools-active" data-target="jarak">Jarak</a></li>
+            <li><a href="#" class="btn-tools" data-target="kecepatan">Kecepatan</a></li>
+            <li><a href="#" class="btn-tools" data-target="waktu">Waktu</a></li>
+        </ul>
+
+        <div class="tool-panels">
+            <div id="jarak" class="tool-panel active">
+                <div class="jarak">
+                    <h3>Mencari Jarak (s)</h3>
+                    <label for="nilaiV_j">Masukkan nilai kecepatan (v)</label>
+                    <input type="number" id="nilaiV_j" placeholder="m/s">
+                    <label for="nilaiT_j">Masukkan nilai waktu (t)</label>
+                    <input type="number" id="nilaiT_j" placeholder="s">
+                    <button id="submitS_j">Kerjakan</button>
+                    <h3>Penyelesaian </h3>
+                    <div id="hasilS_j">
+                        .   .   .
+                    </div>
+                </div>
+            </div>
+
+            <div id="kecepatan" class="tool-panel">
+                <div class="kecepatan">
+                    <h3>Mencari Kecepatan (v)</h3>
+                    <label for="nilaiS_v">Masukkan nilai jarak (s)</label>
+                    <input type="number" id="nilaiS_v" placeholder="m">
+                    <label for="nilaiT_v">Masukkan nilai waktu (t)</label>
+                    <input type="number" id="nilaiT_v" placeholder="s">
+                    <button id="submitV_v">Kerjakan</button>
+                    <h3>Penyelesaian </h3>
+                    <div id="hasilV_v">
+                        .   .   .
+                    </div>
+                </div>
+            </div>
+
+            <div id="waktu" class="tool-panel">
+                <div class="waktu">
+                    <h3>Mencari Waktu (t)</h3>
+                    <label for="nilaiS_t">Masukkan nilai jarak (s)</label>
+                    <input type="number" id="nilaiS_t" placeholder="m">
+                    <label for="nilaiV_t">Masukkan kecepatan (v)</label>
+                    <input type="number" id="nilaiV_t" placeholder="m/s">
+                    <button id="submitT_t">Kerjakan</button>
+                    <h3>Penyelesaian </h3>
+                    <div id="hasilT_t">
+                        .   .   .
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <a href="../index.html">Kembali ke Halaman Utama</a>
+        <a href="glbb.html">Lanjut ke GLBB</a>
+    </footer>
+</body>
+</html>

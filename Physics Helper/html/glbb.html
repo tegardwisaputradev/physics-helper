@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/glbb.css">
+    <!-- katex -->
+    <link rel="stylesheet" href="../css/katex.min.css">
+    <script defer src="../js/katex.min.js"></script>
+    <!-- math.js -->
+    <script defer src="../js/math.js"></script>
+    <!-- script -->
+    <script defer src="../js/glbb.js"></script>
+    <script defer src="../js/visualGlbb.js"></script>
+    <title>GLBB</title>
+</head>
+<body>
+    <h1>Gerak Lurus Berubah Beraturan</h1>
+    <div class="definisi">
+        <h2>GLBB</h2>
+        <p>GLBB (Gerak Lurus Berubah Beraturan) adalah gerak suatu benda pada lintasan lurus dengan percepatan tetap. Artinya, kecepatan benda akan berubah secara teratur (bisa bertambah atau berkurang) setiap detiknya.</p>
+    </div>
+
+    <div class="rumus">
+        <h2>Rumus Utama</h2>
+        <div id="divGlbb_Vt"></div>
+        <div id="divGlbb_S"></div>
+        <div id="divGlbb_V2t"></div>
+        <h4>v<sub>t</sub> = Kecepatan Akhir(m/s)</h4>
+        <h4>v<sub>0</sub> = Kecepatan AWal(m/s)</h4>
+        <h4>a = Percepatan/Perlambatan(m/s<sup>2</sup>)</h4>
+        <h4>t = Waktu(s)</h4>
+        <h4>s = Jarak(m)</h4>
+    </div>
+
+    <div class="tools">
+        <h2>Alat Bantu</h2>
+        <ul>
+            <li><a href="#" class="btn-tools btn-tools-active" data-target="kecepatan_akhir">Kecepatan Akhir</a></li>
+            <li><a href="#" class="btn-tools" data-target="kecepatan_awal">Kecepatan Awal</a></li>
+            <li><a href="#" class="btn-tools" data-target="jarak">Jarak</a></li>
+            <li><a href="#" class="btn-tools" data-target="waktu">Waktu</a></li>
+            <li><a href="#" class="btn-tools" data-target="percepatan">Percepatan</a></li>
+            <li><a href="#" class="btn-tools" data-target="kecepatan_rata_rata">Kecepatan Rata-Rata</a></li>
+        </ul>
+
+        <div class="tool-panel active" data-target="kecepatan_akhir">
+            <div id="kecepatanAkhir" class="kecepatan_akhir">
+                <h3>Mencari Kecepatan Akhir (v<sub>t</sub>)</h3>
+                <div id="visual_Vt"></div>
+                <label for="nilaiV0_Vt">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_Vt" placeholder="(m/s)">
+                <label for="nilaiA_Vt">Masukan nilai Percepatan(a)</label>
+                <input type="number" id="nilaiA_Vt" placeholder="(m/s^2)">
+                <label for="nilaiT_Vt">Masukan nilai Waktu(t)</label>
+                <input type="number" id="nilaiT_Vt" placeholder="(s)">
+                <button id="submitVt_KA">Kerjakan</button>
+                <div id="hasilVt_KA">
+                    .  .  .
+                </div><br>
+                <h3>Alternatif Mencari Kecepatan Akhir (v<sub>t</sub>)</h3>
+                <div id="visual_VtA"></div>
+                <label for="nilaiV0_VtA">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_VtA" placeholder="(m/s)">
+                <label for="nilaiA_VtA">Masukan nilai Percepatan(a)</label>
+                <input type="number" id="nilaiA_VtA" placeholder="(m/s^2)">
+                <label for="nilaiS_VtA">Masukan nilai Jarak(s)</label>
+                <input type="number" id="nilaiS_VtA" placeholder="(m)">
+                <button id="submitVt_KA_A">Kerjakan</button>
+                <div id="hasilVt_KA_A">
+                    .  .  .
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-panel" data-target="kecepatan_awal">
+            <div id="kecepatanAwal" class="kecepatan_awal">
+                <h3>Mencari Kecepatan Awal(v<sub>0</sub>)</h3>
+                <div id="visual_V0"></div>
+                <label for="nilaiVt_V0">Masukan nilai Kecepatan Akhir(v<sub>t</sub>)</label>
+                <input type="number" id="nilaiVt_V0" placeholder="(m/s)">
+                <label for="nilaiA_V0">Masukan nilai Percepatan(a)</label>
+                <input type="number" id="nilaiA_V0" placeholder="(m/s^2)">
+                <label for="nilaiT_V0">Masukan nilai Waktu(t)</label>
+                <input type="number" id="nilaiT_V0" placeholder="(s)">
+                <button id="submitV0_KA">Kerjakan</button>
+                <div id="hasilV0_KA">
+                    .  .  .
+                </div><br>
+                <h3>Alternatif Mencari Kecepatan Awal(v<sub>0</sub>)</h3>
+                <div id="visual_V0A"></div>
+                <label for="nilaiVt_V0A">Masukan nilai Kecepatan Akhir(v<sub>t</sub>)</label>
+                <input type="number" id="nilaiVt_V0A" placeholder="(m/s)">
+                <label for="nilaiA_V0A">Masukan nilai Percepatan(a)</label>
+                <input type="number" id="nilaiA_V0A" placeholder="(m/s^2)">
+                <label for="nilaiS_V0A">Masukan nilai Waktu(t)</label>
+                <input type="number" id="nilaiS_V0A" placeholder="(m)">
+                <button id="submitV0_KA_A">Kerjakan</button>
+                <div id="hasilV0_KA_A">
+                    .  .  .
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-panel" data-target="jarak">
+            <div id="jarak" class="jarak">
+                <h3>Mencari Jarak(s)</h3>
+                <div id="visual_S"></div>
+                <label for="nilaiV0_S">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_S" placeholder="(m/s)">
+                <label for="nilaiA_S">Masukan nilai Percepatan(a)</label>
+                <input type="number" id="nilaiA_S" placeholder="(m/s^2)">
+                <label for="nilaiT_S">Masukan nilai Waktu(t)</label>
+                <input type="number" id="nilaiT_S" placeholder="(s)">
+                <button id="submitS_J">Kerjakan</button>
+                <div id="hasilS_J">
+                    .  .  .
+                </div><br>
+                <h3>Alternatif Mencari Jarak(s)</h3>
+                <div id="visual_SA"></div>
+                <label for="nilaiVt_SA">Masukan nilai Kecepatan Akhir(v<sub>t</sub>)</label>
+                <input type="number" id="nilaiVt_SA" placeholder="(m/s)">
+                <label for="nilaiV0_SA">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_SA" placeholder="(m/s)">
+                <label for="nilaiA_SA">Masukan nilai Percepatan(a)</label>
+                <input type="number" id="nilaiA_SA" placeholder="(m)">
+                <button id="submitS_JA">Kerjakan</button>
+                <div id="hasilS_JA">
+                    .  .  .
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-panel" data-target="waktu">
+            <div id="waktu" class="waktu">
+                <h3>Mencari Waktu(t)</h3>
+                <div id="visual_W"></div>
+                <label for="nilaiVt_T">Masukan nilai Kecepatan Akhir(v<sub>t</sub>)</label>
+                <input type="number" id="nilaiVt_T" placeholder="(m/s)">
+                <label for="nilaiV0_T">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_T" placeholder="(m/s)">
+                <label for="nilaiA_T">Masukan nilai percepatan(a)</label>
+                <input type="number" id="nilaiA_T" placeholder="(m/s^2)">
+                <button id="submitT_W">Kerjakan</button>
+                <div id="hasilT_W">
+                    .  .  .
+                </div><br>
+                <h3>Mencari Alternatif Waktu(t)</h3>
+                <div id="visual_WA"></div>
+                <label for="nilaiV0_TA">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_TA" placeholder="(m/s)">
+                <label for="nilaiA_TA">Masukan nilai percepatan(a)</label>
+                <input type="number" id="nilaiA_TA" placeholder="(m/s^2)">
+                <label for="nilaiS_TA">Masukan nilai Jarak(s)</label>
+                <input type="number" id="nilaiS_TA" placeholder="(m/s)">
+                <button id="submitT_WA">Kerjakan</button>
+                <div id="hasilT_WA">
+                    .  .  .
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-panel" data-target="percepatan">
+            <div id="percepatan" class="percepatan">
+                <h3>Mencari percepatan(a)</h3>
+                <div id="visual_A"></div>
+                <label for="nilaiVt_A">Masukan nilai Kecepatan Akhir(v<sub>t</sub>)</label>
+                <input type="number" id="nilaiVt_A" placeholder="(m/s)">
+                <label for="nilaiV0_A">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_A" placeholder="(m/s)">
+                <label for="nilaiT_A">Masukan nilai percepatan(a)</label>
+                <input type="number" id="nilaiT_A" placeholder="(s)">
+                <button id="submitA_P">Kerjakan</button>
+                <div id="hasilA_P">
+                    .  .  .
+                </div><br>
+                <h3>Mencari Alternatif percepatan(a)</h3>
+                <div id="visual_AA"></div>
+                <label for="nilaiVt_AA">Masukan nilai Kecepatan Akhir(v<sub>t</sub>)</label>
+                <input type="number" id="nilaiVt_AA" placeholder="(m/s)">
+                <label for="nilaiV0_AA">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_AA" placeholder="(m/s)">
+                <label for="nilaiS_AA">Masukan nilai percepatan(a)</label>
+                <input type="number" id="nilaiS_AA" placeholder="(m)">
+                <button id="submitA_PA">Kerjakan</button>
+                <div id="hasilA_PA">
+                    .  .  .
+                </div><br>
+            </div>
+        </div>
+
+        <div class="tool-panel" data-target="kecepatan_rata_rata">
+            <div id="kecepatan_rata_rata" class="kecepatan_rata_rata">
+                <h3>Mencari Kecepatan Rata-Rata</h3>
+                <div id="visual_KRR"></div>
+                <label for="nilaiV0_KRR">Masukan nilai Kecepatan Awal(v<sub>0</sub>)</label>
+                <input type="number" id="nilaiV0_KRR" placeholder="(m/s)">
+                <label for="nilaiVt_KRR">Masukan nilai Kecepatan Akhir(v<sub>t</sub>)</label>
+                <input type="number" id="nilaiVt_KRR" placeholder="(m/s)">
+                <button id="submitKRR_A">Kerjakan</button>
+                <div id="hasilKRR_A">
+                    .  .  .
+                </div><br>
+                <h3>Mencari kecepatan_rata_rata</h3>
+                <div id="visual_KRRA"></div>
+                <label for="nilaiS_KRRA">Masukan nilai Jarak(s)</label>
+                <input type="number" id="nilaiS_KRRA" placeholder="(m)">
+                <label for="nilaiT_KRRA">Masukan nilai Waktu(t)</label>
+                <input type="number" id="nilaiT_KRRA" placeholder="(s)">
+                <button id="submitKRR_AA">Kerjakan</button>
+                <div id="hasilKRR_AA">
+                    .  .  .
+                </div><br>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <a href="glb.html">Kembali ke GLB</a>
+        <a href="../index.html">Kembali ke Halaman Utama</a>
+        <a href="#">Lanjut Ke (coming soon)</a>
+    </footer>
+</body>
+</html>

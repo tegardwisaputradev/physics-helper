@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e9d2fc;
+    padding: 24px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0 0 10px;
+}
+
+.definisi, .rumus, .tools{
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(31, 44, 62, 0.08);
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.rumus {
+    border-left: 4px solid #b962ff;
+}
+
+.rumus #divGlbb_Vt,
+.rumus #divGlbb_S,
+.rumus #divGlbb_V2t,
+#visual_Vt,
+#visual_VtA,
+#visual_V0,
+#visual_V0A,
+#visual_S,
+#visual_SA,
+#visual_W,
+#visual_WA,
+#visual_A,
+#visual_AA,
+#visual_KRR,
+#visual_KRRA{
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(31, 44, 62, 0.08);
+}
+
+.page-footer a {
+    text-decoration: none;
+    color: #8121cf;
+    font-weight: 600;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+.tools ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tools ul li {
+    flex: 1;
+}
+
+.tools .btn-tools-active, .tools .btn-tools{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #b962ff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.tools .btn-tools:hover{
+    background-color: #9f46e7;
+}
+.tools .btn-tools-active{
+    background-color: #8121cf;
+}
+
+.tool-panel {
+    display: none;
+    margin-top: 20px;
+}
+
+.tool-panel.active{
+    display: block;
+}
+
+.tool-panel .kecepatan_akhir,
+.tool-panel .kecepatan_awal,
+.tool-panel .jarak,
+.tool-panel .waktu,
+.tool-panel .percepatan,
+.tool-panel .kecepatan_rata_rata {
+    display: grid;
+    gap: 12px;
+}
+
+.tool-panel label {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.tool-panel input[type="number"] {
+    width: 98%;
+    padding: 10px 12px;
+    border: 1px solid #d8dce3;
+    border-radius: 8px;
+    background: #d8dce3;
+    font-size: 1rem;
+}
+
+.tool-panel button {
+    border: none;
+    padding: 12px 18px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: #be6eff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.tool-panel button:hover {
+    background-color: #a953f0;
+}
+
+.tool-panel #hasilVt_KA,
+.tool-panel #hasilVt_KA_A,
+.tool-panel #hasilV0_KA,
+.tool-panel #hasilV0_KA_A,
+.tool-panel #hasilS_J, 
+.tool-panel #hasilS_JA,
+.tool-panel #hasilT_W, 
+.tool-panel #hasilT_WA,
+.tool-panel #hasilA_P, 
+.tool-panel #hasilA_PA,
+.tool-panel #hasilKRR_A, 
+.tool-panel #hasilKRR_AA {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #222;
+    background:  #d8dce3;
+    text-align: center;
+    padding: 5px 0 15px 15px;
+    border-radius: 4px;
+}
